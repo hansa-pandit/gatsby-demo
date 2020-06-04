@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+require("./src/styles/styles.scss");
+require("./src/components/Header/header.scss");

@@ -1,0 +1,9 @@
+header {
+  background: pink;
+  a {
+    color: greenyellow;
+  }
+  @include breakpoint($desktopScreens) {
+    background: greenyellow;
+  }
+}
