@@ -1,0 +1,32 @@
+/**
+ * @file
+ * Contact banner styles.
+ */
+
+.contact-banner {
+  padding: rem(80px 0);
+  background: url("../../images/contact-banner.jpg") no-repeat;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  
+  .form-fieldset {
+    @include breakpoint($desktopScreens) {
+      max-width: 65%;
+      margin: 0 auto;
+    }
+  }
+  
+  &__title-text {
+    margin-bottom: rem(35px);
+  }
+  
+  &__title {
+    margin-bottom: rem(5px);
+  }
+  
+  &__text {
+    margin: 0;
+    font-weight: $semibold;
+  }
+}

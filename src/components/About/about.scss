@@ -1,0 +1,25 @@
+/**
+ * @file
+ * About styles
+ */
+
+.about {
+  padding: rem(85px 0);
+  
+  &__inner {
+    @include breakpoint($desktopScreens) {
+      display: flex;
+    }
+  }
+  
+  &__content,
+  &__image {
+    @include breakpoint($desktopScreens) {
+      flex: 1 1 50%;
+    }
+  }
+  
+  &__content {
+    padding-left: rem(20px);
+  }
+}

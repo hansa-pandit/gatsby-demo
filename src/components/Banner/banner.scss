@@ -1,0 +1,30 @@
+/**
+ * @file
+ * Page banner styles.
+ */
+
+.banner {
+  min-height: calc(100vh - 70px); // Calculating the viewport height considering header.
+  color: $white;
+  background: url("../../images/banner.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  @include breakpoint($tabletOnly) {
+    min-height: rem(500px); // Not keeping 100vh here since it wouldn't be a good UX to block this large area of table with very less information.
+  }
+  
+  .container {
+    padding: rem(84px 0);
+    
+
+    @include breakpoint($desktopScreens) {
+      padding: 10% 0;
+    }
+  }
+  
+  &__title {
+    text-align: center;
+    margin-bottom: rem(45px);
+  }
+}

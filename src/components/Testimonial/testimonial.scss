@@ -1,0 +1,72 @@
+/**
+ * @file
+ * Testimonial styles
+ */
+
+.testimonial {
+  background: $light-grey;
+  padding: rem(72px 0);
+  
+  &__text {
+    position: relative;
+    padding: rem(20px 40px);
+    background: $white;
+    border-radius: rem(18px);
+    box-shadow: 0 3px 2px $grey2, 0 2px 2px $grey2, 0 0 2px $grey2 ;
+    z-index: 3;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 66px;
+      height: 32px;
+      background: #fff;
+      bottom: 0;
+      left: 32px;
+      z-index: 5;
+    }
+  }
+  
+  &__arrow {
+    position: absolute;
+    top: calc(100% - 21px);
+    height: 30px;
+    width: 51px;
+    transform: rotate(30deg);
+    box-shadow:  0 2px 2px $grey2, 0 2px 2px $grey2, 0 0 2px $grey2 ;
+    background: $white;
+    z-index: 2;
+  }
+  
+  &__item {
+    box-sizing: border-box;
+    padding: rem(1px 10px 0);
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: rem(35px);
+  }
+  &__icon {
+    position: absolute;
+    left: rem(10px);
+    top: rem(25px);
+  }
+  
+  &__author {
+    display: flex;
+    align-items: center;
+    margin-top: rem(32px);
+    
+    &--details {
+      margin-left: rem(10px);
+    }
+    &--name {
+      text-transform: uppercase;
+      font-weight: $semibold;
+    }
+    &--position {
+      color: $text-grey-light;
+      font-size: rem(14px);
+    }
+  }
+}

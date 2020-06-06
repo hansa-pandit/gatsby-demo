@@ -4,8 +4,8 @@ import Logo from '../../images/logo.png';
 
 function HeaderLogo() {
   return (
-    <div className="site-logo">
-      <Link to="/" className="site-logo">
+    <div id="siteLogo" className="site-logo">
+      <Link to="/" className="site-logo" aria-label="Company Logo name">
         <img className="" src={Logo} alt="Logo" />
       </Link>
     </div>

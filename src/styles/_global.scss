@@ -1,0 +1,125 @@
+/**
+ * @file
+ * Global styles.
+ */
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: rem(16px);
+  color: $text-grey;
+}
+img {
+  max-width: 100%;
+}
+a {
+  display: inline-block;
+  transition: $transition;
+  color: $orange;
+  text-decoration: none;
+  &:hover {
+    transition: $transition;
+  }
+}
+h1 {
+  font-size: rem(32px);
+  @include breakpoint($desktopScreens) {
+    font-size: rem(36px);
+  }
+}
+h2 {
+  font-size: rem(24px);
+  @include breakpoint($desktopScreens) {
+    font-size: rem(28px);
+  }
+}
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::placeholder {
+  color: $text-grey-light;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $semibold;
+}
+
+*:focus,
+button:focus {
+  outline: 1px dotted $orange;
+}
+
+.form-group {
+  @include breakpoint($desktopScreens) {
+    display: flex;
+    margin: rem(0 -10px);
+  }
+  
+  .form-element {
+    @include breakpoint($desktopScreens) {
+      flex: 1 1 auto;
+      margin: rem(0 10px 16px);
+    }
+  }
+}
+.form-element {
+  margin-bottom: rem(16px);
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: rem(12px);
+  border-radius: 3px;
+  box-shadow: none;
+  border: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include breakpoint($retina) {
+    max-width: rem(1800px);
+    padding: 0 4%;
+  }
+}
+.main-content {
+  max-width: rem(1800px);
+  margin: 0 auto;
+  min-height: rem(500px);
+}
+.button {
+  padding: rem(12px 35px);
+  border: 0;
+  border-radius: rem(25px);
+  font-size: rem(16px);
+  cursor: pointer;
+  
+  &__primary--orange {
+    background: $orange;
+    color: $white;
+    transition: $transition;
+    &:hover,
+    &:focus {
+      background: $dark-orange;
+      transition: $transition;
+    }
+  }
+}

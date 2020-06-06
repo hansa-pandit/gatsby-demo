@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Service block styles.
+ */
+
+.services {
+  @include breakpoint($tablet) {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__item {
+    display: flex;
+    padding: rem(10px 20px);
+    margin-bottom: rem(10px);
+    align-items: center;
+    color: $white;
+    text-decoration: none;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    
+    @include breakpoint($tablet) {
+      display: block;
+      text-align: center;
+      padding: rem(40px 45px);
+      margin: rem(0 10px);
+    }
+  }
+  
+  &__icon {
+    display: block;
+    
+    @include breakpoint($belowDesktop) {
+      max-width: rem(40px);
+    }
+    
+    @include breakpoint($tablet) {
+      margin: 0 auto;
+    }
+  }
+  
+  &__title {
+    display: block;
+    margin-left: rem(20px);
+    
+    @include breakpoint($tablet) {
+      margin: rem(15px 0 0 0);
+    }
+  }
+}

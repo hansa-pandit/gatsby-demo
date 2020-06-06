@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Footer styles.
+ */
+
+.site-footer {
+  padding: rem(35px 0);
+  background: $brand-black;
+  color: $text-grey-light;
+  font-weight: $semibold;
+  
+  &__inner {
+    text-align: center;
+    
+    @include breakpoint($desktopScreens) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+  
+  &__social-link {
+    display: inline-block;
+    margin: rem(0 4px);
+    color: $text-grey-light;
+    
+    &:hover {
+      color: $white;
+    }
+  }
+  
+  .follow-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: rem(4px);
+  }
+  
+  .copyright {
+    @include breakpoint($belowDesktop) {
+      margin-bottom: rem(10px);
+    }
+  }
+}

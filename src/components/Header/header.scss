@@ -1,9 +1,176 @@
-header {
-  background: pink;
-  a {
-    color: greenyellow;
-  }
+/**
+ * @file
+ * Header styles.
+ */
+
+.site-header {
+  background: $brand-black;
+  padding: rem(24px 0);
   @include breakpoint($desktopScreens) {
-    background: greenyellow;
+    padding: rem(16px 0);
+  }
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__contact {
+    &--block {
+      &-mobile {
+        display: none;
+        order: 3;
+        
+        @include breakpoint($belowDesktop) {
+          display: block;
+        }
+      }
+      
+      &-desktop {
+        display: block;
+        @include breakpoint($belowDesktop) {
+          display: none;
+        }
+      }
+    }
+    
+    &--link {
+      display: flex;
+      align-items: center;
+      
+      @include breakpoint($desktopScreens) {
+        padding: rem(8px 20px);
+        background: $orange;
+        color: $white;
+        text-decoration: none;
+        border-radius: rem(20px);
+      }
+      
+      span {
+        margin-left: rem(6px);
+        @include breakpoint($belowDesktop) {
+          display: none;
+        }
+      }
+      
+      &:hover,
+      &:focus {
+       @include breakpoint($desktopScreens) {
+         background: $dark-orange;
+       }
+      }
+    }
+  }
+
+  
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @include breakpoint($belowDesktop) {
+      order: 1;
+    }
+  }
+}
+
+.site-logo {
+  width: 100%;
+  max-width: rem(130px);
+  @include breakpoint($belowDesktop) {
+    order: 2;
+  }
+}
+
+.site-navigation {
+  &__wrapper {
+    
+    &.is-expanded {
+      display: block;
+    }
+    
+    @include breakpoint($belowDesktop) {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 99;
+    }
+    
+    .menu {
+      @include breakpoint($belowDesktop) {
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        background: $brand-black;
+        padding-top: rem(40px);
+      }
+      
+      @include breakpoint($tablet) {
+        width: 92%;
+      }
+      
+      @include breakpoint($desktopScreens) {
+        width: 100%;
+      }
+    }
+  }
+  .close-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+    
+    @include breakpoint($tablet) {
+      width: 8%;
+    }
+    
+    @include breakpoint($desktopScreens) {
+      display: none;
+    }
+  }
+  
+  &__hamburger {
+    display: block;
+    @include breakpoint($desktopScreens) {
+      display: none;
+    }
+  }
+  
+  .menu-item {
+    margin: rem(0 20px);
+    
+    @include breakpoint($desktopScreens) {
+      display: inline-block;
+    }
+    
+    @include breakpoint($belowDesktop) {
+      margin: 0;
+      border-bottom: 1px solid $grey;
+    }
+  }
+  
+  .menu-item-link {
+    padding: rem(8px);
+    color: $white;
+    font-weight: $semibold;
+    opacity: 0.6;
+    text-decoration: none;
+    
+    &[aria-current],
+    &:hover {
+      opacity: 1;
+    }
+    
+    @include breakpoint($belowDesktop) {
+      width: 100%;
+      box-sizing: border-box;
+      padding: rem(15px );
+    }
   }
 }

@@ -1,4 +1,7 @@
-
+/**
+ * @file
+ * Global variables.
+ */
 
 @import '../../node_modules/sass-rem/rem';
 
@@ -9,6 +12,7 @@
 
 $mobile: screen (max-width 767px);
 $tablet: screen (min-width 768px);
+$tabletOnly: screen (min-width 768px) (max-width 1023px);
 $belowDesktop: screen (max-width 1023px);
 $desktopScreens: screen (min-width 1024px);
 $wideScreens: screen (min-width 1280px);
@@ -18,3 +22,27 @@ $retina: screen (min-width 1921px);
 //Utility variables
 
 $transition: 0.4s ease;
+
+
+//Color variables
+
+$white: #fff;
+$black: #000;
+$brand-black: #171513;
+$orange: #ee3b00;
+$dark-orange: #bd2f00;
+$text-grey-light: #8b7f7b;
+$text-grey: #484340;
+$light-grey: #f7f7f7;
+$grey: #47433f;
+$grey2: #c4c4c4;
+
+
+//font variables
+
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+
